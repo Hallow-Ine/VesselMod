@@ -3,13 +3,13 @@
 	"id": "vessel",
 	"version": "${version}",
 	"name": "Vessel",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "FLESH and SOUL bound together through WILL.",
 	"authors": [
-		"Me!"
+		"Hallow_Ine"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://https://github.com/Hallow-Ine/VesselMod"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/vessel/icon.png",
