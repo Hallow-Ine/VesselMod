@@ -1,6 +1,6 @@
 # Vessel
 
-Oh, god uh here's a short description of the main idea ig?
+Description of the mod ig:
 
 ### SOULS and FLESH:
 SOULs are the culmination of one's will. <br />
