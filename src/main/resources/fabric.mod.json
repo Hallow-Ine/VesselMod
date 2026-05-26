@@ -20,7 +20,10 @@
 		],
 		"fabric-datagen": [
 			"hallow.vessel.VesselDataGenerator"
-		]
+		],
+      "client": [
+        "hallow.vessel.VesselClient"
+      ]
 	},
 	"mixins": [
 		"vessel.mixins.json"
