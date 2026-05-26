@@ -1,6 +1,7 @@
 package hallow.vessel.block;
 
 import hallow.vessel.Vessel;
+import hallow.vessel.block.custom.AltarBlock;
 import hallow.vessel.block.custom.PointedMagnetiteBlock;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -46,6 +47,13 @@ public class ModBlocks {
             )
     );
 
+    public static final Block ALTAR_BLOCK = registerBlock(
+            "altar_block",
+            new AltarBlock(
+                    AbstractBlock.Settings.create()
+            )
+    );
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(Vessel.MOD_ID, name), block);
@@ -61,6 +69,7 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(MAGNETITE_BLOCK);
             fabricItemGroupEntries.add(POINTED_MAGNETITE);
+            fabricItemGroupEntries.add(ALTAR_BLOCK);
         });
     }
 }
