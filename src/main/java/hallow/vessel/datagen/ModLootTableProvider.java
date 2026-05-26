@@ -1,5 +1,6 @@
 package hallow.vessel.datagen;
 
+import hallow.vessel.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -13,6 +14,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        addDrop(ModBlocks.MAGNETITE_BLOCK);
+        addDrop(ModBlocks.POINTED_MAGNETITE);
 
     }
 }

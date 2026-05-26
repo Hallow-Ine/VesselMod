@@ -1,5 +1,6 @@
 package hallow.vessel;
 
+import hallow.vessel.block.ModBlocks;
 import hallow.vessel.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -22,5 +23,6 @@ public class Vessel implements ModInitializer {
 
 		LOGGER.info("Lading up Vessel Mod!");
         ModItems.registerModItems();
+        ModBlocks.registerModBlocks();
 	}
 }

@@ -1,0 +1,7 @@
+{
+  "render_type": "minecraft:cutout",
+  "parent": "vessel:block/pointed_magnetite",
+  "textures": {
+    "cross": "vessel:block/pointed_magnetite_down_frustum"
+  }
+}

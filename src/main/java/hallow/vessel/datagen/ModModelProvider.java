@@ -1,5 +1,6 @@
 package hallow.vessel.datagen;
 
+import hallow.vessel.block.ModBlocks;
 import hallow.vessel.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -14,7 +15,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAGNETITE_BLOCK);
     }
 
     @Override

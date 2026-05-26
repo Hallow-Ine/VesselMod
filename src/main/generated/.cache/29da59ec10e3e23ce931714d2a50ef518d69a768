@@ -1,2 +1,5 @@
-// 1.21.1	2026-05-26T15:33:18.1295512	Vessel/Model Definitions
+// 1.21.1	2026-05-26T17:06:18.8044032	Vessel/Model Definitions
+d75e63a8d5d93c5bd22c1a9aa91d8b51301bad20 assets\vessel\blockstates\magnetite_block.json
 14a33e170ee36b4774d40cfdfe7ac3f26d09a734 assets\vessel\models\item\soul_contract.json
+87a5d65b3b9e1daa2ecf63b508a441c123c58236 assets\vessel\models\block\magnetite_block.json
+ddb691151f8db46a694df9b7086a3f5e84b4344e assets\vessel\models\item\magnetite_block.json
