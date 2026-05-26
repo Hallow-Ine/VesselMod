@@ -2,5 +2,7 @@
   "item.vessel.soul_contract": "Soul Contract",
 
   "block.vessel.magnetite_block": "Block of Magnetite",
-  "block.vessel.pointed_magnetite": "Pointed Magnetite"
+  "block.vessel.pointed_magnetite": "Pointed Magnetite",
+  "block.vessel.magnet_block": "Magnet",
+  "block.vessel.electromagnet_block": "Electromagnet"
 }
