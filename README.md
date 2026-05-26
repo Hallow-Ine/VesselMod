@@ -1,6 +1,6 @@
 # Vessel
 
-oh god uh here's a short description of the main idea ig?
+Oh, god uh here's a short description of the main idea ig?
 
 ### SOULS and FLESH:
 SOULs are the culmination of one's will. <br />
