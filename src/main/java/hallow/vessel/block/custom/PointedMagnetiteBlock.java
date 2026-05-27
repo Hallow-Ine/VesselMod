@@ -46,32 +46,12 @@ public class PointedMagnetiteBlock extends Block implements LandingBlock, Waterl
     public static final DirectionProperty VERTICAL_DIRECTION = Properties.VERTICAL_DIRECTION;
     public static final EnumProperty<Thickness> THICKNESS = Properties.THICKNESS;
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
-    private static final int field_31205 = 11;
-    private static final int field_31207 = 2;
-    private static final float field_31208 = 0.02F;
-    private static final float field_31209 = 0.12F;
-    private static final int field_31210 = 11;
-    private static final float WATER_DRIP_CHANCE = 0.17578125F;
-    private static final float LAVA_DRIP_CHANCE = 0.05859375F;
-    private static final double field_31213 = 0.6;
-    private static final float field_31214 = 1.0F;
-    private static final int field_31215 = 40;
-    private static final int field_31200 = 6;
-    private static final float field_31201 = 2.0F;
-    private static final int field_31202 = 2;
-    private static final float field_33566 = 5.0F;
-    private static final float field_33567 = 0.011377778F;
-    private static final int MAX_STALACTITE_GROWTH = 7;
-    private static final int STALACTITE_FLOOR_SEARCH_RANGE = 10;
-    private static final float field_31203 = 0.6875F;
     private static final VoxelShape TIP_MERGE_SHAPE = Block.createCuboidShape(5.0, 0.0, 5.0, 11.0, 16.0, 11.0);
     private static final VoxelShape UP_TIP_SHAPE = Block.createCuboidShape(5.0, 0.0, 5.0, 11.0, 11.0, 11.0);
     private static final VoxelShape DOWN_TIP_SHAPE = Block.createCuboidShape(5.0, 5.0, 5.0, 11.0, 16.0, 11.0);
     private static final VoxelShape BASE_SHAPE = Block.createCuboidShape(4.0, 0.0, 4.0, 12.0, 16.0, 12.0);
     private static final VoxelShape FRUSTUM_SHAPE = Block.createCuboidShape(3.0, 0.0, 3.0, 13.0, 16.0, 13.0);
     private static final VoxelShape MIDDLE_SHAPE = Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 16.0, 14.0);
-    private static final float field_31204 = 0.125F;
-    private static final VoxelShape DRIP_COLLISION_SHAPE = Block.createCuboidShape(6.0, 0.0, 6.0, 10.0, 16.0, 10.0);
 
     @Override
     public MapCodec<hallow.vessel.block.custom.PointedMagnetiteBlock> getCodec() {

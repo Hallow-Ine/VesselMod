@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "altar_part=core": {
+      "model": "vessel:block/altar_core"
+    },
+    "altar_part=edge": {
+      "model": "vessel:block/altar_edge"
+    },
+    "altar_part=pillar": {
+      "model": "vessel:block/altar_pillar"
+    },
+    "altar_part=corner": {
+      "model": "vessel:block/altar_corner"
+    }
+  }
+}
