@@ -51,6 +51,7 @@ public class ModBlocks {
             "altar_block",
             new AltarBlock(
                     AbstractBlock.Settings.create()
+                            .strength(-1.0F, 3600000.0F)
             )
     );
 

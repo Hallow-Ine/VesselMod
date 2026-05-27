@@ -9,11 +9,13 @@ public class ModProperties {
 
     public static final int ALTAR_POS_X_MIN = -1;
     public static final int ALTAR_POS_X_MAX = 1;
-    public static final int ALTAR_POS_Y_MIN = 0;
-    public static final int ALTAR_POS_Y_MAX = 8;
     public static final int ALTAR_POS_Z_MIN = -1;
     public static final int ALTAR_POS_Z_MAX = 1;
 
-    public static final EnumProperty<AltarPart> ALTAR_PART = EnumProperty.of("part", AltarPart.class);
+    public static final EnumProperty<AltarPart> ALTAR_PART = EnumProperty.of("altar_part", AltarPart.class);
+
+    public static final int ALTAR_LAYER_8_MAX = 8;
+
+    public static final IntProperty ALTAR_LAYER_8 = IntProperty.of("layer_amount", 0, 7);
 
 }
