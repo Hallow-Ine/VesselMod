@@ -1,9 +1,11 @@
 package hallow.vessel.block.custom;
 
+import com.llamalad7.mixinextras.lib.antlr.runtime.Vocabulary;
 import hallow.vessel.block.ModBlocks;
 import hallow.vessel.property.ModProperties;
 import hallow.vessel.property.enumeration.AltarPart;
 import net.minecraft.block.*;
+import net.minecraft.block.enums.DoorHinge;
 import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -18,6 +20,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Position;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
@@ -30,6 +33,24 @@ public class AltarBlock extends Block {
     public static final EnumProperty<AltarPart> PART = ModProperties.ALTAR_PART;
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final IntProperty LAYER = ModProperties.ALTAR_LAYER_8;
+    public static final VoxelShape CORE_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
+    public static final VoxelShape EDGE_NORTH_SHAPE = Block.createCuboidShape(0.0, 0.0, 4.0, 16.0, 16.0, 16.0);
+    public static final VoxelShape EDGE_SOUTH_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 12.0);
+    public static final VoxelShape EDGE_WEST_SHAPE = Block.createCuboidShape(4.0, 0.0, 0.0, 16.0, 16.0, 16.0);
+    public static final VoxelShape EDGE_EAST_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 12.0, 16.0, 16.0);
+
+    public static final VoxelShape CORNER_NORTH_SHAPE_MAIN = Block.createCuboidShape(0.0, 0.0, 4.0, 8.0, 16.0, 16.0);
+    public static final VoxelShape CORNER_SOUTH_SHAPE_MAIN = Block.createCuboidShape(8.0, 0.0, 0.0, 16.0, 16.0, 12.0);
+    public static final VoxelShape CORNER_WEST_SHAPE_MAIN = Block.createCuboidShape(4.0, 0.0, 8.0, 16.0, 16.0, 16.0);
+    public static final VoxelShape CORNER_EAST_SHAPE_MAIN = Block.createCuboidShape(0.0, 0.0, 0.0, 12.0, 16.0, 8.0);
+    public static final VoxelShape CORNER_NORTH_SHAPE_SIDE = Block.createCuboidShape(8.0, 0.0, 8.0, 12.0, 16.0, 16.0);
+    public static final VoxelShape CORNER_SOUTH_SHAPE_SIDE = Block.createCuboidShape(4.0, 0.0, 0.0, 8.0, 16.0, 8.0);
+    public static final VoxelShape CORNER_WEST_SHAPE_SIDE = Block.createCuboidShape(8.0, 0.0, 4.0, 16.0, 16.0, 8.0);
+    public static final VoxelShape CORNER_EAST_SHAPE_SIDE = Block.createCuboidShape(0.0, 0.0, 8.0, 8.0, 16.0, 12.0);
+    private static final VoxelShape CORNER_NORTH_SHAPE = VoxelShapes.union(CORNER_NORTH_SHAPE_MAIN, CORNER_NORTH_SHAPE_SIDE);
+    private static final VoxelShape CORNER_SOUTH_SHAPE = VoxelShapes.union(CORNER_SOUTH_SHAPE_MAIN, CORNER_SOUTH_SHAPE_SIDE);
+    private static final VoxelShape CORNER_WEST_SHAPE = VoxelShapes.union(CORNER_WEST_SHAPE_MAIN, CORNER_WEST_SHAPE_SIDE);
+    private static final VoxelShape CORNER_EAST_SHAPE = VoxelShapes.union(CORNER_EAST_SHAPE_MAIN, CORNER_EAST_SHAPE_SIDE);
 
     public AltarBlock(Settings settings) {
         super(settings);
@@ -40,6 +61,22 @@ public class AltarBlock extends Block {
                         .with(FACING, Direction.NORTH)
                         .with(LAYER, 0)
         );
+    }
+
+    @Override
+    protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        Direction direction = state.get(FACING);
+        if (state.get(PART) == AltarPart.CORE) {
+            return CORE_SHAPE;
+        } else {
+            boolean bl = state.get(PART) == AltarPart.EDGE;
+            return switch (direction) {
+                case SOUTH -> bl ? EDGE_SOUTH_SHAPE : CORNER_SOUTH_SHAPE;
+                case WEST -> bl ? EDGE_WEST_SHAPE : CORNER_WEST_SHAPE;
+                case NORTH -> bl ? EDGE_NORTH_SHAPE : CORNER_NORTH_SHAPE;
+                default -> bl ? EDGE_EAST_SHAPE : CORNER_EAST_SHAPE;
+            };
+        }
     }
 
     @Nullable

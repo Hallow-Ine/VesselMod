@@ -3,11 +3,35 @@
     "altar_part=core": {
       "model": "vessel:block/altar_core"
     },
-    "altar_part=edge": {
+    "altar_part=edge,facing=north": {
       "model": "vessel:block/altar_edge"
     },
-    "altar_part=corner": {
+    "altar_part=edge,facing=east": {
+      "model": "vessel:block/altar_edge",
+      "y": 90
+    },
+    "altar_part=edge,facing=south": {
+      "model": "vessel:block/altar_edge",
+      "y": 180
+    },
+    "altar_part=edge,facing=west": {
+      "model": "vessel:block/altar_edge",
+      "y": 270
+    },
+    "altar_part=corner,facing=north": {
       "model": "vessel:block/altar_corner"
+    },
+    "altar_part=corner,facing=east": {
+      "model": "vessel:block/altar_corner",
+      "y": 90
+    },
+    "altar_part=corner,facing=south": {
+      "model": "vessel:block/altar_corner",
+      "y": 180
+    },
+    "altar_part=corner,facing=west": {
+      "model": "vessel:block/altar_corner",
+      "y": 270
     }
   }
 }
