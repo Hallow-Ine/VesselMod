@@ -1,35 +1,245 @@
 {
   "variants": {
-    "altar_part=core": {
+    "part=core": {
       "model": "vessel:block/altar_core"
     },
-    "altar_part=edge,facing=north": {
-      "model": "vessel:block/altar_edge"
+    "part=edge,facing=north,layer=0": {
+        "model": "vessel:block/altar_edge"
     },
-    "altar_part=edge,facing=east": {
+    "part=edge,facing=east,layer=0": {
       "model": "vessel:block/altar_edge",
       "y": 90
     },
-    "altar_part=edge,facing=south": {
+    "part=edge,facing=south,layer=0": {
       "model": "vessel:block/altar_edge",
       "y": 180
     },
-    "altar_part=edge,facing=west": {
+    "part=edge,facing=west,layer=0": {
       "model": "vessel:block/altar_edge",
       "y": 270
     },
-    "altar_part=corner,facing=north": {
+    "part=edge,facing=north,layer=1": {
+      "model": "vessel:block/altar_edge"
+    },
+    "part=edge,facing=east,layer=1": {
+      "model": "vessel:block/altar_edge",
+      "y": 90
+    },
+    "part=edge,facing=south,layer=1": {
+      "model": "vessel:block/altar_edge",
+      "y": 180
+    },
+    "part=edge,facing=west,layer=1": {
+      "model": "vessel:block/altar_edge",
+      "y": 270
+    },
+    "part=edge,facing=north,layer=2": {
+      "model": "vessel:block/altar_edge"
+    },
+    "part=edge,facing=east,layer=2": {
+      "model": "vessel:block/altar_edge",
+      "y": 90
+    },
+    "part=edge,facing=south,layer=2": {
+      "model": "vessel:block/altar_edge",
+      "y": 180
+    },
+    "part=edge,facing=west,layer=2": {
+      "model": "vessel:block/altar_edge",
+      "y": 270
+    },
+    "part=edge,facing=west,layer=3": {
+      "model": "vessel:block/altar_edge_center_bottom",
+      "y": 270
+    },
+    "part=edge,facing=north,layer=3": {
+      "model": "vessel:block/altar_edge_center_bottom"
+    },
+    "part=edge,facing=east,layer=3": {
+      "model": "vessel:block/altar_edge_center_bottom",
+      "y": 90
+    },
+    "part=edge,facing=south,layer=3": {
+      "model": "vessel:block/altar_edge_center_bottom",
+      "y": 180
+    },
+    "part=edge,facing=west,layer=4": {
+      "model": "vessel:block/altar_edge_center_top",
+      "y": 270
+    },
+    "part=edge,facing=north,layer=4": {
+      "model": "vessel:block/altar_edge_center_top"
+    },
+    "part=edge,facing=east,layer=4": {
+      "model": "vessel:block/altar_edge_center_top",
+      "y": 90
+    },
+    "part=edge,facing=south,layer=4": {
+      "model": "vessel:block/altar_edge_center_top",
+      "y": 180
+    },
+    "part=edge,facing=north,layer=5": {
+      "model": "vessel:block/altar_edge"
+    },
+    "part=edge,facing=east,layer=5": {
+      "model": "vessel:block/altar_edge",
+      "y": 90
+    },
+    "part=edge,facing=south,layer=5": {
+      "model": "vessel:block/altar_edge",
+      "y": 180
+    },
+    "part=edge,facing=west,layer=5": {
+      "model": "vessel:block/altar_edge",
+      "y": 270
+    },
+    "part=edge,facing=north,layer=6": {
+      "model": "vessel:block/altar_edge"
+    },
+    "part=edge,facing=east,layer=6": {
+      "model": "vessel:block/altar_edge",
+      "y": 90
+    },
+    "part=edge,facing=south,layer=6": {
+      "model": "vessel:block/altar_edge",
+      "y": 180
+    },
+    "part=edge,facing=west,layer=6": {
+      "model": "vessel:block/altar_edge",
+      "y": 270
+    },
+    "part=edge,facing=north,layer=7": {
+      "model": "vessel:block/altar_edge"
+    },
+    "part=edge,facing=east,layer=7": {
+      "model": "vessel:block/altar_edge",
+      "y": 90
+    },
+    "part=edge,facing=south,layer=7": {
+      "model": "vessel:block/altar_edge",
+      "y": 180
+    },
+    "part=edge,facing=west,layer=7": {
+      "model": "vessel:block/altar_edge",
+      "y": 270
+    },
+    "part=corner,facing=north,layer=0": {
       "model": "vessel:block/altar_corner"
     },
-    "altar_part=corner,facing=east": {
+    "part=corner,facing=east,layer=0": {
       "model": "vessel:block/altar_corner",
       "y": 90
     },
-    "altar_part=corner,facing=south": {
+    "part=corner,facing=south,layer=0": {
       "model": "vessel:block/altar_corner",
       "y": 180
     },
-    "altar_part=corner,facing=west": {
+    "part=corner,facing=west,layer=0": {
+      "model": "vessel:block/altar_corner",
+      "y": 270
+    },
+    "part=corner,facing=north,layer=1": {
+      "model": "vessel:block/altar_corner"
+    },
+    "part=corner,facing=east,layer=1": {
+      "model": "vessel:block/altar_corner",
+      "y": 90
+    },
+    "part=corner,facing=south,layer=1": {
+      "model": "vessel:block/altar_corner",
+      "y": 180
+    },
+    "part=corner,facing=west,layer=1": {
+      "model": "vessel:block/altar_corner",
+      "y": 270
+    },
+    "part=corner,facing=north,layer=2": {
+      "model": "vessel:block/altar_corner"
+    },
+    "part=corner,facing=east,layer=2": {
+      "model": "vessel:block/altar_corner",
+      "y": 90
+    },
+    "part=corner,facing=south,layer=2": {
+      "model": "vessel:block/altar_corner",
+      "y": 180
+    },
+    "part=corner,facing=west,layer=2": {
+      "model": "vessel:block/altar_corner",
+      "y": 270
+    },
+    "part=corner,facing=north,layer=3": {
+      "model": "vessel:block/altar_corner_center_bottom"
+    },
+    "part=corner,facing=east,layer=3": {
+      "model": "vessel:block/altar_corner_center_bottom",
+      "y": 90
+    },
+    "part=corner,facing=south,layer=3": {
+      "model": "vessel:block/altar_corner_center_bottom",
+      "y": 180
+    },
+    "part=corner,facing=west,layer=3": {
+      "model": "vessel:block/altar_corner_center_bottom",
+      "y": 270
+    },
+    "part=corner,facing=north,layer=4": {
+      "model": "vessel:block/altar_corner_center_top"
+    },
+    "part=corner,facing=east,layer=4": {
+      "model": "vessel:block/altar_corner_center_top",
+      "y": 90
+    },
+    "part=corner,facing=south,layer=4": {
+      "model": "vessel:block/altar_corner_center_top",
+      "y": 180
+    },
+    "part=corner,facing=west,layer=4": {
+      "model": "vessel:block/altar_corner_center_top",
+      "y": 270
+    },
+    "part=corner,facing=north,layer=5": {
+      "model": "vessel:block/altar_corner"
+    },
+    "part=corner,facing=east,layer=5": {
+      "model": "vessel:block/altar_corner",
+      "y": 90
+    },
+    "part=corner,facing=south,layer=5": {
+      "model": "vessel:block/altar_corner",
+      "y": 180
+    },
+    "part=corner,facing=west,layer=5": {
+      "model": "vessel:block/altar_corner",
+      "y": 270
+    },
+    "part=corner,facing=north,layer=6": {
+      "model": "vessel:block/altar_corner"
+    },
+    "part=corner,facing=east,layer=6": {
+      "model": "vessel:block/altar_corner",
+      "y": 90
+    },
+    "part=corner,facing=south,layer=6": {
+      "model": "vessel:block/altar_corner",
+      "y": 180
+    },
+    "part=corner,facing=west,layer=6": {
+      "model": "vessel:block/altar_corner",
+      "y": 270
+    },
+    "part=corner,facing=north,layer=7": {
+      "model": "vessel:block/altar_corner"
+    },
+    "part=corner,facing=east,layer=7": {
+      "model": "vessel:block/altar_corner",
+      "y": 90
+    },
+    "part=corner,facing=south,layer=7": {
+      "model": "vessel:block/altar_corner",
+      "y": 180
+    },
+    "part=corner,facing=west,layer=7": {
       "model": "vessel:block/altar_corner",
       "y": 270
     }

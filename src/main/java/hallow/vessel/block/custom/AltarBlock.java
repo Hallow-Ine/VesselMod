@@ -33,12 +33,26 @@ public class AltarBlock extends Block {
     public static final EnumProperty<AltarPart> PART = ModProperties.ALTAR_PART;
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
     public static final IntProperty LAYER = ModProperties.ALTAR_LAYER_8;
+
     public static final VoxelShape CORE_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
+
+    // EDGE shapes
     public static final VoxelShape EDGE_NORTH_SHAPE = Block.createCuboidShape(0.0, 0.0, 4.0, 16.0, 16.0, 16.0);
     public static final VoxelShape EDGE_SOUTH_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 12.0);
     public static final VoxelShape EDGE_WEST_SHAPE = Block.createCuboidShape(4.0, 0.0, 0.0, 16.0, 16.0, 16.0);
     public static final VoxelShape EDGE_EAST_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 12.0, 16.0, 16.0);
 
+    public static final VoxelShape EDGE_NORTH_CENTER_BOTTOM_SHAPE = Block.createCuboidShape(0.0, 0.0, 4.0, 16.0, 14.0, 16.0);
+    public static final VoxelShape EDGE_SOUTH_CENTER_BOTTOM_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 14.0, 12.0);
+    public static final VoxelShape EDGE_WEST_CENTER_BOTTOM_SHAPE = Block.createCuboidShape(4.0, 0.0, 0.0, 16.0, 14.0, 16.0);
+    public static final VoxelShape EDGE_EAST_CENTER_BOTTOM_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 12.0, 14.0, 16.0);
+
+    public static final VoxelShape EDGE_NORTH_CENTER_TOP_SHAPE = Block.createCuboidShape(0.0, 2.0, 4.0, 16.0, 16.0, 16.0);
+    public static final VoxelShape EDGE_SOUTH_CENTER_TOP_SHAPE = Block.createCuboidShape(0.0, 2.0, 0.0, 16.0, 16.0, 12.0);
+    public static final VoxelShape EDGE_WEST_CENTER_TOP_SHAPE = Block.createCuboidShape(4.0, 2.0, 0.0, 16.0, 16.0, 16.0);
+    public static final VoxelShape EDGE_EAST_CENTER_TOP_SHAPE = Block.createCuboidShape(0.0, 2.0, 0.0, 12.0, 16.0, 16.0);
+
+    // CORNER shapes
     public static final VoxelShape CORNER_NORTH_SHAPE_MAIN = Block.createCuboidShape(0.0, 0.0, 4.0, 8.0, 16.0, 16.0);
     public static final VoxelShape CORNER_SOUTH_SHAPE_MAIN = Block.createCuboidShape(8.0, 0.0, 0.0, 16.0, 16.0, 12.0);
     public static final VoxelShape CORNER_WEST_SHAPE_MAIN = Block.createCuboidShape(4.0, 0.0, 8.0, 16.0, 16.0, 16.0);
@@ -51,6 +65,32 @@ public class AltarBlock extends Block {
     private static final VoxelShape CORNER_SOUTH_SHAPE = VoxelShapes.union(CORNER_SOUTH_SHAPE_MAIN, CORNER_SOUTH_SHAPE_SIDE);
     private static final VoxelShape CORNER_WEST_SHAPE = VoxelShapes.union(CORNER_WEST_SHAPE_MAIN, CORNER_WEST_SHAPE_SIDE);
     private static final VoxelShape CORNER_EAST_SHAPE = VoxelShapes.union(CORNER_EAST_SHAPE_MAIN, CORNER_EAST_SHAPE_SIDE);
+
+    public static final VoxelShape CORNER_NORTH_CENTER_BOTTOM_SHAPE_MAIN = Block.createCuboidShape(0.0, 0.0, 4.0, 8.0, 14.0, 16.0);
+    public static final VoxelShape CORNER_SOUTH_CENTER_BOTTOM_SHAPE_MAIN = Block.createCuboidShape(8.0, 0.0, 0.0, 16.0, 14.0, 12.0);
+    public static final VoxelShape CORNER_WEST_CENTER_BOTTOM_SHAPE_MAIN = Block.createCuboidShape(4.0, 0.0, 8.0, 16.0, 14.0, 16.0);
+    public static final VoxelShape CORNER_EAST_CENTER_BOTTOM_SHAPE_MAIN = Block.createCuboidShape(0.0, 0.0, 0.0, 12.0, 14.0, 8.0);
+    public static final VoxelShape CORNER_NORTH_CENTER_BOTTOM_SHAPE_SIDE = Block.createCuboidShape(8.0, 0.0, 8.0, 12.0, 14.0, 16.0);
+    public static final VoxelShape CORNER_SOUTH_CENTER_BOTTOM_SHAPE_SIDE = Block.createCuboidShape(4.0, 0.0, 0.0, 8.0, 14.0, 8.0);
+    public static final VoxelShape CORNER_WEST_CENTER_BOTTOM_SHAPE_SIDE = Block.createCuboidShape(8.0, 0.0, 4.0, 16.0, 14.0, 8.0);
+    public static final VoxelShape CORNER_EAST_CENTER_BOTTOM_SHAPE_SIDE = Block.createCuboidShape(0.0, 0.0, 8.0, 8.0, 14.0, 12.0);
+    private static final VoxelShape CORNER_NORTH_CENTER_BOTTOM_SHAPE = VoxelShapes.union(CORNER_NORTH_CENTER_BOTTOM_SHAPE_MAIN, CORNER_NORTH_CENTER_BOTTOM_SHAPE_SIDE);
+    private static final VoxelShape CORNER_SOUTH_CENTER_BOTTOM_SHAPE = VoxelShapes.union(CORNER_SOUTH_CENTER_BOTTOM_SHAPE_MAIN, CORNER_SOUTH_CENTER_BOTTOM_SHAPE_SIDE);
+    private static final VoxelShape CORNER_WEST_CENTER_BOTTOM_SHAPE = VoxelShapes.union(CORNER_WEST_CENTER_BOTTOM_SHAPE_MAIN, CORNER_WEST_CENTER_BOTTOM_SHAPE_SIDE);
+    private static final VoxelShape CORNER_EAST_CENTER_BOTTOM_SHAPE = VoxelShapes.union(CORNER_EAST_CENTER_BOTTOM_SHAPE_MAIN, CORNER_EAST_CENTER_BOTTOM_SHAPE_SIDE);
+
+    public static final VoxelShape CORNER_NORTH_CENTER_TOP_SHAPE_MAIN = Block.createCuboidShape(0.0, 2.0, 4.0, 8.0, 16.0, 16.0);
+    public static final VoxelShape CORNER_SOUTH_CENTER_TOP_SHAPE_MAIN = Block.createCuboidShape(8.0, 2.0, 0.0, 16.0, 16.0, 12.0);
+    public static final VoxelShape CORNER_WEST_CENTER_TOP_SHAPE_MAIN = Block.createCuboidShape(4.0, 2.0, 8.0, 16.0, 16.0, 16.0);
+    public static final VoxelShape CORNER_EAST_CENTER_TOP_SHAPE_MAIN = Block.createCuboidShape(0.0, 2.0, 0.0, 12.0, 16.0, 8.0);
+    public static final VoxelShape CORNER_NORTH_CENTER_TOP_SHAPE_SIDE = Block.createCuboidShape(8.0, 2.0, 8.0, 12.0, 16.0, 16.0);
+    public static final VoxelShape CORNER_SOUTH_CENTER_TOP_SHAPE_SIDE = Block.createCuboidShape(4.0, 2.0, 0.0, 8.0, 16.0, 8.0);
+    public static final VoxelShape CORNER_WEST_CENTER_TOP_SHAPE_SIDE = Block.createCuboidShape(8.0, 2.0, 4.0, 16.0, 16.0, 8.0);
+    public static final VoxelShape CORNER_EAST_CENTER_TOP_SHAPE_SIDE = Block.createCuboidShape(0.0, 2.0, 8.0, 8.0, 16.0, 12.0);
+    private static final VoxelShape CORNER_NORTH_CENTER_TOP_SHAPE = VoxelShapes.union(CORNER_NORTH_CENTER_TOP_SHAPE_MAIN, CORNER_NORTH_CENTER_TOP_SHAPE_SIDE);
+    private static final VoxelShape CORNER_SOUTH_CENTER_TOP_SHAPE = VoxelShapes.union(CORNER_SOUTH_CENTER_TOP_SHAPE_MAIN, CORNER_SOUTH_CENTER_TOP_SHAPE_SIDE);
+    private static final VoxelShape CORNER_WEST_CENTER_TOP_SHAPE = VoxelShapes.union(CORNER_WEST_CENTER_TOP_SHAPE_MAIN, CORNER_WEST_CENTER_TOP_SHAPE_SIDE);
+    private static final VoxelShape CORNER_EAST_CENTER_TOP_SHAPE = VoxelShapes.union(CORNER_EAST_CENTER_TOP_SHAPE_MAIN, CORNER_EAST_CENTER_TOP_SHAPE_SIDE);
 
     public AltarBlock(Settings settings) {
         super(settings);
@@ -70,12 +110,23 @@ public class AltarBlock extends Block {
             return CORE_SHAPE;
         } else {
             boolean bl = state.get(PART) == AltarPart.EDGE;
-            return switch (direction) {
-                case SOUTH -> bl ? EDGE_SOUTH_SHAPE : CORNER_SOUTH_SHAPE;
-                case WEST -> bl ? EDGE_WEST_SHAPE : CORNER_WEST_SHAPE;
-                case NORTH -> bl ? EDGE_NORTH_SHAPE : CORNER_NORTH_SHAPE;
-                default -> bl ? EDGE_EAST_SHAPE : CORNER_EAST_SHAPE;
-            };
+            if (state.get(LAYER) == 3 || state.get(LAYER) == 4) {
+                boolean bl2 = state.get(LAYER) == 3;
+                return switch (direction) {
+                    case SOUTH -> bl ? bl2 ? EDGE_SOUTH_CENTER_BOTTOM_SHAPE : EDGE_SOUTH_CENTER_TOP_SHAPE : bl2 ? CORNER_SOUTH_CENTER_BOTTOM_SHAPE : CORNER_SOUTH_CENTER_TOP_SHAPE;
+                    case WEST -> bl ? bl2 ? EDGE_WEST_CENTER_BOTTOM_SHAPE : EDGE_WEST_CENTER_TOP_SHAPE : bl2 ? CORNER_WEST_CENTER_BOTTOM_SHAPE : CORNER_WEST_CENTER_TOP_SHAPE;
+                    case NORTH -> bl ? bl2 ? EDGE_NORTH_CENTER_BOTTOM_SHAPE : EDGE_NORTH_CENTER_TOP_SHAPE : bl2 ? CORNER_NORTH_CENTER_BOTTOM_SHAPE : CORNER_NORTH_CENTER_TOP_SHAPE;
+                    default -> bl ? bl2 ? EDGE_EAST_CENTER_BOTTOM_SHAPE : EDGE_EAST_CENTER_TOP_SHAPE : bl2 ? CORNER_EAST_CENTER_BOTTOM_SHAPE : CORNER_EAST_CENTER_TOP_SHAPE;
+                };
+            } else {
+                return switch (direction) {
+                    case SOUTH -> bl ? EDGE_SOUTH_SHAPE : CORNER_SOUTH_SHAPE;
+                    case WEST -> bl ? EDGE_WEST_SHAPE : CORNER_WEST_SHAPE;
+                    case NORTH -> bl ? EDGE_NORTH_SHAPE : CORNER_NORTH_SHAPE;
+                    default -> bl ? EDGE_EAST_SHAPE : CORNER_EAST_SHAPE;
+                };
+            }
+
         }
     }
 

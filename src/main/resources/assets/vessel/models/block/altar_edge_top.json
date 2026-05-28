@@ -1,0 +1,62 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"textures": {
+		"1": "vessel:block/altar_edge_top",
+		"particle": "altar_edge"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 4],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 4, 4], "texture": "#1"},
+				"east": {"uv": [4, 0, 7, 4], "texture": "#1"},
+				"south": {"uv": [0, 4, 4, 8], "texture": "#1"},
+				"west": {"uv": [4, 4, 7, 8], "texture": "#1"},
+				"up": {"uv": [11, 3, 7, 0], "texture": "#1"},
+				"down": {"uv": [11, 3, 7, 6], "texture": "#1"}
+			}
+		},
+		{
+			"from": [6.5, 15.25, -14],
+			"to": [9.5, 15.25, 3],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 15.25, 2]},
+			"faces": {
+				"north": {"uv": [0, 0, 0.75, 0], "texture": "#1"},
+				"east": {"uv": [0, 0, 4, 0], "texture": "#1"},
+				"south": {"uv": [0, 0, 0.75, 0], "texture": "#1"},
+				"west": {"uv": [0, 0, 4, 0], "texture": "#1"},
+				"up": {"uv": [7.75, 10.25, 7, 6], "texture": "#1"},
+				"down": {"uv": [8.5, 6, 7.75, 10.25], "texture": "#1"}
+			}
+		},
+		{
+			"from": [8, 13.75, -14],
+			"to": [8, 16.75, 3],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 15.25, 2]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 0.75], "texture": "#1"},
+				"east": {"uv": [0, 8, 4.25, 8.75], "texture": "#1"},
+				"south": {"uv": [0, 0, 0, 0.75], "texture": "#1"},
+				"west": {"uv": [8.5, 6, 12.75, 6.75], "texture": "#1"},
+				"up": {"uv": [0, 4, 0, 0], "texture": "#1"},
+				"down": {"uv": [0, 0, 0, 4], "texture": "#1"}
+			}
+		},
+		{
+			"from": [6, 15, 2],
+			"to": [10, 15, 4],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 15, 2]},
+			"faces": {
+				"north": {"uv": [0, 0, 0.75, 0], "texture": "#1"},
+				"east": {"uv": [0, 0, 0.5, 0], "texture": "#1"},
+				"south": {"uv": [0, 0, 0.75, 0], "texture": "#1"},
+				"west": {"uv": [0, 0, 0.5, 0], "texture": "#1"},
+				"up": {"uv": [5.25, 8.5, 4.25, 8], "texture": "#1"},
+				"down": {"uv": [6.25, 8, 5.25, 8.5], "texture": "#1"}
+			}
+		}
+	]
+}
