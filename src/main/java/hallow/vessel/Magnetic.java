@@ -14,7 +14,7 @@ import net.minecraft.world.World;
 
 public interface Magnetic {
 
-    double RANGE = 8.0;
+    double RANGE = 4.0;
     double STRENGTH = 0.08;
 
     private void attractEntity(Entity entity, Vec3d center, double strengthMultiplier) {
