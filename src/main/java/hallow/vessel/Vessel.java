@@ -26,5 +26,6 @@ public class Vessel implements ModInitializer {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
 		ModBlockEntities.registerModBlockEntities();
+		ModComponents.registerModComponents();
 	}
 }
