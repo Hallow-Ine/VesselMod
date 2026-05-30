@@ -28,9 +28,9 @@ public class ItemEntityMixin {
 
         var item_components = stack.getComponents();
 
-        if(!item_components.contains((ModComponents.SOUL_UUID_TYPE))) return;
+        if(!item_components.contains((ModComponents.SOUL_UUID))) return;
 
-        var uuid = item_components.get(ModComponents.SOUL_UUID_TYPE);
+        var uuid = item_components.get(ModComponents.SOUL_UUID);
 
         var player = self.getServer().getPlayerManager().getPlayer(uuid);
 

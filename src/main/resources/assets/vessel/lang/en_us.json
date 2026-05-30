@@ -1,6 +1,8 @@
 {
   "item.vessel.soul_contract": "Soul Contract",
-
+  "item.vessel.soul_contract_tooltip.default" : "A soul contract, yet to be awoken",
+  "item.vessel.soul_contract_tooltip.active" : "A soul contract, ready to be bound to a player",
+  "item.vessel.soul_contract_tooltip.bound" : "A soul contract, bound to %s",
   "block.vessel.magnetite_block": "Block of Magnetite",
   "block.vessel.pointed_magnetite": "Pointed Magnetite",
   "block.vessel.magnet_block": "Magnet",
