@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "vessel:block/empty_model"
+    },
+    "half=lower,facing=north": {
+      "model": "vessel:block/magnetite_statue"
+    },
+    "half=lower,facing=east": {
+      "model": "vessel:block/magnetite_statue",
+      "y": 90
+    },
+    "half=lower,facing=south": {
+      "model": "vessel:block/magnetite_statue",
+      "y": 180
+    },
+    "half=lower,facing=west": {
+      "model": "vessel:block/magnetite_statue",
+      "y": 270
+    }
+  }
+}

@@ -1,10 +1,7 @@
 package hallow.vessel.block;
 
 import hallow.vessel.Vessel;
-import hallow.vessel.block.custom.ElectroMagnetBlock;
-import hallow.vessel.block.custom.MagnetBlock;
-import hallow.vessel.block.custom.AltarBlock;
-import hallow.vessel.block.custom.PointedMagnetiteBlock;
+import hallow.vessel.block.custom.*;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
@@ -40,6 +37,18 @@ public class ModBlocks {
     public static final Block MAGNETITE_BLOCK = registerBlock(
             "magnetite_block",
             new Block(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DEEPSLATE_GRAY)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .sounds(BlockSoundGroup.DRIPSTONE_BLOCK)
+                            .requiresTool()
+                            .strength(1.5F, 1.0F)
+            )
+    );
+
+    public static final Block MAGNETITE_STATUE = registerBlock(
+            "magnetite_statue",
+            new StatueBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.DEEPSLATE_GRAY)
                             .instrument(NoteBlockInstrument.BASEDRUM)
@@ -95,6 +104,7 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(MAGNETITE_BLOCK);
             fabricItemGroupEntries.add(POINTED_MAGNETITE);
+            fabricItemGroupEntries.add(MAGNETITE_STATUE);
             fabricItemGroupEntries.add(MAGNET_BLOCK);
             fabricItemGroupEntries.add(ELECTROMAGNET_BLOCK);
             fabricItemGroupEntries.add(ALTAR_BLOCK);
