@@ -17,6 +17,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup lookup) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.MAGNETITE_BLOCK)
-                .add(ModBlocks.POINTED_MAGNETITE);
+                .add(ModBlocks.POINTED_MAGNETITE)
+                .add(ModBlocks.MAGNET_BLOCK)
+                .add(ModBlocks.ELECTROMAGNET_BLOCK);
     }
 }

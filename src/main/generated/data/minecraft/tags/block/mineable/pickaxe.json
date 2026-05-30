@@ -1,6 +1,8 @@
 {
   "values": [
     "vessel:magnetite_block",
-    "vessel:pointed_magnetite"
+    "vessel:pointed_magnetite",
+    "vessel:magnet_block",
+    "vessel:electromagnet_block"
   ]
 }

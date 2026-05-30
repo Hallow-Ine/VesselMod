@@ -8,10 +8,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import java.util.function.Function;
-
 public class ModItems {
-    public static final Item SOUL_CONTRACT = registerItem("soul_contract", new Item(new Item.Settings()));
+    public static final Item SOUL_CONTRACT = registerItem("soul_contract", new SoulContractItem(new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Vessel.MOD_ID, name), item);

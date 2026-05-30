@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "vessel:block/electromagnet_block"
+    }
+  }
+}
