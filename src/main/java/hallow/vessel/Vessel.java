@@ -2,6 +2,8 @@ package hallow.vessel;
 
 import hallow.vessel.block.ModBlocks;
 import hallow.vessel.blockEntity.ModBlockEntities;
+import hallow.vessel.command.UnbindCommand;
+import hallow.vessel.component.ModComponents;
 import hallow.vessel.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -27,5 +29,6 @@ public class Vessel implements ModInitializer {
         ModBlocks.registerModBlocks();
 		ModBlockEntities.registerModBlockEntities();
 		ModComponents.registerModComponents();
+		UnbindCommand.register();
 	}
 }

@@ -1,4 +1,4 @@
-package hallow.vessel;
+package hallow.vessel.component;
 
 import static hallow.vessel.Vessel.*;
 import java.util.UUID;
@@ -13,7 +13,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Uuids;
 
 public class ModComponents {
-    protected static void registerModComponents() {
+    public static void registerModComponents() {
         LOGGER.info("registering {} components", MOD_ID);
     }
 
@@ -33,6 +33,13 @@ public class ModComponents {
             Registry.register(
             Registries.DATA_COMPONENT_TYPE,
             Identifier.of(MOD_ID, "active"),
+            ComponentType.<Boolean>builder().codec(Codec.BOOL).packetCodec(PacketCodecs.BOOL).build()
+            );
+
+    public static final ComponentType<Boolean> BOUND = // both for players and books
+            Registry.register(
+            Registries.DATA_COMPONENT_TYPE,
+            Identifier.of(MOD_ID, "bound"),
             ComponentType.<Boolean>builder().codec(Codec.BOOL).packetCodec(PacketCodecs.BOOL).build()
             );
 }

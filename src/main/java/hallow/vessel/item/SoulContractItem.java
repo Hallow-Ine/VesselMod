@@ -2,8 +2,9 @@ package hallow.vessel.item;
 
 import java.util.List;
 
-import hallow.vessel.ModComponents;
 import hallow.vessel.block.ModBlocks;
+import hallow.vessel.component.ModComponents;
+import hallow.vessel.soul.SoulBoundPlayer;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -25,6 +26,7 @@ public class SoulContractItem extends Item {
 
     private void bindSoul(PlayerEntity soul, ItemStack self) {
         soul.sendMessage(Text.literal("player clicked with uuid: " + soul.getUuidAsString()));
+        ((SoulBoundPlayer) soul).bindSoul();
         self.set(ModComponents.SOUL_UUID, soul.getUuid());
         self.set(ModComponents.SOUL_NAME, soul.getNameForScoreboard());
     }
@@ -32,11 +34,11 @@ public class SoulContractItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
 
-        //TODO: implement something when rebinding
-
         ItemStack stack = player.getStackInHand(hand);
 
-        if(!stack.getOrDefault(ModComponents.ACTIVE, false)) return TypedActionResult.pass(stack);
+        if(((SoulBoundPlayer) player).isSoulBound()) return TypedActionResult.consume(stack);
+        
+        if(stack.contains(ModComponents.SOUL_UUID)) return TypedActionResult.consume(stack);
 
         if (!world.isClient()) {
             bindSoul(player, stack);
@@ -78,18 +80,20 @@ public class SoulContractItem extends Item {
     @Override
     public void appendTooltip(ItemStack itemStack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
 
-        if(!itemStack.getOrDefault(ModComponents.ACTIVE, false)) {
+        if(!itemStack.contains(ModComponents.SOUL_UUID)) {
             tooltip.add(Text.translatable("item.vessel.soul_contract_tooltip.default"));
             return;
         }
 
-        if(itemStack.get(ModComponents.SOUL_UUID) == null) {
-            tooltip.add(Text.translatable("item.vessel.soul_contract_tooltip.active"));
+        String victimName = itemStack.getOrDefault(ModComponents.SOUL_NAME, "Jeb_");
+
+        if(!itemStack.getOrDefault(ModComponents.ACTIVE, false)) {
+            
+            tooltip.add(Text.translatable("item.vessel.soul_contract_tooltip.bound", Text.literal(victimName).formatted(Formatting.RED)));
             return;
         }
 
-        String victimName = itemStack.getOrDefault(ModComponents.SOUL_NAME, "I_Dont_Caramel");
-        tooltip.add(Text.translatable("item.vessel.soul_contract_tooltip.bound", Text.literal(victimName).formatted(Formatting.RED)));
+        tooltip.add(Text.translatable("item.vessel.soul_contract_tooltip.active", Text.literal(victimName).formatted(Formatting.RED)));
     }
     
 }
