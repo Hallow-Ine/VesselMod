@@ -7,7 +7,7 @@ public class PlayerCurseExecutioner {
 
     public static void cursePlayer(ServerPlayerEntity player){
         if (player == null) return;
-        ((SoulBoundPlayer) player).unBindSoul();
+        SoulManager.unBindSoul(player);
         player.sendMessage(Text.literal("test message: cursed"));
     }
     

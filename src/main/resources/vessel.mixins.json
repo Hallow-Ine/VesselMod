@@ -5,7 +5,8 @@
 	"mixins": [
 		"ExampleMixin",
 		"ItemEntityMixin",
-		"PlayerEntityMixin"
+		"PlayerEntityMixin",
+		"PlayerManagerMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

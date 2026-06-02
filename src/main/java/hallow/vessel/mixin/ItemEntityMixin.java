@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import hallow.vessel.component.ModComponents;
 import hallow.vessel.item.ModItems;
 import hallow.vessel.soul.PlayerCurseExecutioner;
-import hallow.vessel.soul.SoulBoundPlayer;
+import hallow.vessel.soul.SoulManager;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.damage.DamageSource;
 
@@ -43,7 +43,7 @@ public class ItemEntityMixin {
         if(self.isOnFire()){
             PlayerCurseExecutioner.cursePlayer(player);
         } else {
-            ((SoulBoundPlayer) player).unBindSoul();
+            SoulManager.unBindSoul(player);
         }
 
         self.getStack().onItemEntityDestroyed(self);

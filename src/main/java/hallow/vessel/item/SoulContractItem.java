@@ -4,8 +4,9 @@ import java.util.List;
 
 import hallow.vessel.block.ModBlocks;
 import hallow.vessel.component.ModComponents;
-import hallow.vessel.soul.SoulBoundPlayer;
+import hallow.vessel.soul.SoulContractScreen;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -24,25 +25,16 @@ public class SoulContractItem extends Item {
         super(settings);
     }
 
-    private void bindSoul(PlayerEntity soul, ItemStack self) {
-        soul.sendMessage(Text.literal("player clicked with uuid: " + soul.getUuidAsString()));
-        ((SoulBoundPlayer) soul).bindSoul();
-        self.set(ModComponents.SOUL_UUID, soul.getUuid());
-        self.set(ModComponents.SOUL_NAME, soul.getNameForScoreboard());
-    }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
 
         ItemStack stack = player.getStackInHand(hand);
 
-        if(((SoulBoundPlayer) player).isSoulBound()) return TypedActionResult.consume(stack);
-        
-        if(stack.contains(ModComponents.SOUL_UUID)) return TypedActionResult.consume(stack);
-
-        if (!world.isClient()) {
-            bindSoul(player, stack);
+        if(world.isClient()) {
+            MinecraftClient.getInstance().setScreen(new SoulContractScreen(player, stack, hand));
         }
+
         return TypedActionResult.success(stack, world.isClient());
     }
 
