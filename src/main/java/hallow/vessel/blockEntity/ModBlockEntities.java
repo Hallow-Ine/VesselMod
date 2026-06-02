@@ -4,7 +4,6 @@ import hallow.vessel.Vessel;
 import hallow.vessel.block.ModBlocks;
 import hallow.vessel.blockEntity.custom.ElectroMagnetBlockEntity;
 import hallow.vessel.blockEntity.custom.MagnetBlockEntity;
-import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;

@@ -2,7 +2,6 @@ package hallow.vessel.property;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
-import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Property;
 
 import java.util.*;
@@ -36,6 +35,7 @@ public class ArrayProperty extends Property<Integer> {
         }
     }
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     public Collection getValues() {
         return this.values;
@@ -50,6 +50,7 @@ public class ArrayProperty extends Property<Integer> {
         return new ArrayProperty(name, min, max);
     }
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override
     public Optional parse(String name) {
         return Optional.empty();

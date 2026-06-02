@@ -28,7 +28,8 @@ import hallow.vessel.network.payload.SignSoulContractPayload;
 @Environment(EnvType.CLIENT)
 public class SoulContractScreen extends Screen {
 	private final PlayerEntity player;
-    private final ItemStack itemStack;
+    @SuppressWarnings("unused")
+	private final ItemStack itemStack;
 	private ButtonWidget doneButton;
 	private ButtonWidget signButton;
 	private final Hand hand;
@@ -135,6 +136,7 @@ public class SoulContractScreen extends Screen {
 		}
 	}
 
+	@SuppressWarnings("unused")
 	private SoulContractScreen.Position screenPositionToAbsolutePosition(SoulContractScreen.Position position) {
 		return new SoulContractScreen.Position(position.x - (this.width - 192) / 2 - 36, position.y - 32);
 	}
@@ -185,6 +187,7 @@ public class SoulContractScreen extends Screen {
 		return i < 0 ? -(i + 2) : i;
 	}
 
+	@SuppressWarnings("unused")
 	private Rect2i getRectFromCorners(SoulContractScreen.Position start, SoulContractScreen.Position end) {
 		SoulContractScreen.Position position = this.absolutePositionToScreenPosition(start);
 		SoulContractScreen.Position position2 = this.absolutePositionToScreenPosition(end);
@@ -213,9 +216,11 @@ public class SoulContractScreen extends Screen {
 		static final SoulContractScreen.PageContent EMPTY = new SoulContractScreen.PageContent(
 			"", new SoulContractScreen.Position(0, 0), true, new int[]{0}, new SoulContractScreen.Line[]{new SoulContractScreen.Line(OrderedText.EMPTY, 0, 0)}, new Rect2i[0]
 		);
+		@SuppressWarnings("unused")
 		private final String pageContent;
 		final SoulContractScreen.Position position;
 		final boolean atEnd;
+		@SuppressWarnings("unused")
 		private final int[] lineStarts;
 		final SoulContractScreen.Line[] lines;
 		final Rect2i[] selectionRectangles;
