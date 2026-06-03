@@ -8,6 +8,7 @@
   "item.vessel.soul_contract.contract_text.active": "\"i dunno\" -%s",
   "block.vessel.magnetite_block": "Block of Magnetite",
   "block.vessel.pointed_magnetite": "Pointed Magnetite",
+  "block.vessel.magnetite_statue": "Magnetite Statue",
   "block.vessel.magnet_block": "Magnet",
   "block.vessel.electromagnet_block": "Electromagnet",
   "block.vessel.altar_block": "Altar"

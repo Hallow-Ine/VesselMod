@@ -16,6 +16,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         addDrop(ModBlocks.MAGNETITE_BLOCK);
         addDrop(ModBlocks.POINTED_MAGNETITE);
+        addDrop(ModBlocks.MAGNETITE_STATUE);
         addDrop(ModBlocks.MAGNET_BLOCK);
         addDrop(ModBlocks.ELECTROMAGNET_BLOCK);
     }

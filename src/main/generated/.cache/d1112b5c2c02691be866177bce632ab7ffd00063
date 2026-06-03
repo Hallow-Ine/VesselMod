@@ -1,3 +1,6 @@
-// 1.21.1	2026-05-27T11:40:46.3219759	Vessel/Block Loot Tables
+// 1.21.1	2026-05-30T18:11:54.7566897	Vessel/Block Loot Tables
 d3f93bc3aec690cfc8098b503f47fc1c2d6ca6ef data\vessel\loot_table\blocks\pointed_magnetite.json
+fc5bd697835870994958b362dcf6c065d6025012 data\vessel\loot_table\blocks\electromagnet_block.json
+0addec1a232524dce56e67b1aca65cc1b0bcf2fb data\vessel\loot_table\blocks\magnetite_statue.json
 a1661dd1eccafa19cc5193350b91cceb2bbde646 data\vessel\loot_table\blocks\magnetite_block.json
+054fd50476a9542138c77d2add36310da677b87d data\vessel\loot_table\blocks\magnet_block.json
